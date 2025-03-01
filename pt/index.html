@@ -151,8 +151,7 @@
 
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                    <!-- O form envia para sendmail.php -->
-                    <form id="contact-form" method="POST">
+                    <form id="contact-form">
                         <div class="mb-3 text-start">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-control" id="email" name="email"
@@ -162,12 +161,10 @@
                             <label class="form-label">Celular</label>
                             <div class="d-flex">
                                 <div class="me-2" style="width: 90px;">
-                                    <!-- Código do país -->
                                     <input type="text" class="form-control" id="country-code" name="country_code"
                                         placeholder="+55" required>
                                 </div>
                                 <div class="flex-grow-1">
-                                    <!-- Número local -->
                                     <input type="tel" class="form-control" id="phone" name="phone"
                                         placeholder="(XX) XXXXX-XXXX" required>
                                 </div>
@@ -192,8 +189,7 @@
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
                     <h5 class="modal-title" id="feedbackModalLabel">Mensagem Enviada</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Fechar"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
                 </div>
                 <div class="modal-body">
                     Sua mensagem foi enviada com sucesso!
@@ -222,8 +218,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
     <script src="../assets/js/script.js"></script>
 </body>
 

@@ -64,15 +64,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Abrir modal sem PHP
 
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Impede o envio do formulário
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita o envio real do formulário
 
-    // Exibe o modal Bootstrap
-    let modal = new bootstrap.Modal(document.getElementById('feedbackModal'));
-    modal.show();
+        // Exibir o modal
+        var modal = new bootstrap.Modal(document.getElementById('feedbackModal'));
+        modal.show();
 
-    // Opcional: Limpa o formulário após exibir o modal
-    document.getElementById("contact-form").reset();
+        // Resetar o formulário após o envio (opcional)
+        this.reset();
+    });
 });
 
 
