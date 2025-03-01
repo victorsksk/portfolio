@@ -62,7 +62,23 @@ document.addEventListener('DOMContentLoaded', () => {
     typeEffect();
 });
 
+// Abrir modal sem PHP
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Impede o envio do formulário
+
+    // Exibe o modal Bootstrap
+    let modal = new bootstrap.Modal(document.getElementById('feedbackModal'));
+    modal.show();
+
+    // Opcional: Limpa o formulário após exibir o modal
+    document.getElementById("contact-form").reset();
+});
+
+
 // Validação Formulário Contato
+// Caso use este método coloque action="sendmail.php" no formulário e remova o script acima
+/*
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contact-form');
 
@@ -105,4 +121,5 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
         });
     }
-});  
+});
+*/
